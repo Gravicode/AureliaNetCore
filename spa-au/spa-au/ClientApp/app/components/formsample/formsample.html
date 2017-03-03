@@ -1,0 +1,23 @@
+<template>  
+
+   <form role = "form" submit.delegate = "signup()">
+
+      <label for = "email">Email</label>
+      <input type = "text" value.bind = "email" placeholder = "Email">
+
+      <label for = "password">Password</label>
+      <input type = "password" value.bind = "password" placeholder = "Password">
+
+        <label for = "checkbox">Checkbox</label>
+        <input type = "checkbox" id = "checkbox" checked.bind = "isChecked"><br/>
+        <label repeat.for = "option of options">
+         <input type = "radio" name = "myOptions" 
+            model.bind = "option" checked.bind = "$parent.selectedOption"/>
+            ${option.text}
+        </label><br/>
+       
+
+      <button type = "submit">Signup</button>
+   </form>
+
+</template>
